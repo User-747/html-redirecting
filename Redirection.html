@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Instagram Reel Redirect</title>
+    <script>
+        // Add your list of Instagram reel links here
+        const reels = [
+            "https://www.instagram.com/p/C4iZaW7u635/?igsh=X2pLdUkzUWJ1&img_index=2",
+            "https://www.instagram.com/share/reel/BANGyF8ztU",
+            "https://www.instagram.com/share/reel/_tLRWyVHJ",
+            "https://www.instagram.com/share/reel/BAW9HJ-0vq",
+            "https://www.instagram.com/p/C7JcamBMR63/?hl=en",
+            "https://www.instagram.com/p/C8r8JZvpY4y/?hl=en",
+            "https://www.instagram.com/p/C8j-kqHJpld/?hl=en",
+            "https://www.instagram.com/p/C9PceUnv_8U/?hl=en",
+            "https://www.instagram.com/p/C84MLu4sMSi/?hl=en",
+            "https://www.instagram.com/p/C9w0_eHP_bD/?hl=en",
+            "https://www.instagram.com/p/C-Q5UsIPcI-/?hl=en",
+            "https://www.instagram.com/p/C_b8Xo0yi-B/?hl=en",
+            "https://www.instagram.com/p/C-5CfPSx9A8/?hl=en",
+            "https://www.instagram.com/p/DAXeQ1jNp3y/?hl=en",
+            "https://www.instagram.com/p/C_NO4ZpKlVB/?hl=en",
+            "https://www.instagram.com/p/DAZannlIUJe/?hl=en",
+            "https://www.instagram.com/p/DBRVH-StI9K/?hl=en",
+            "https://www.instagram.com/p/C_qU9qyo9_M/?hl=en",
+            "https://www.instagram.com/p/C8JHFSlPc5c/?hl=en",
+            "https://www.instagram.com/p/C992k_dsZYH/?hl=en",
+            "https://www.instagram.com/p/C-KnJZsyce3/?hl=en",
+            "https://www.instagram.com/p/DBjxVTooKkO/?hl=en",
+            "https://www.instagram.com/p/C_lULNLuxpr/?hl=en",
+            "https://www.instagram.com/p/DBmUtKnC8-F/?hl=en",
+            "https://www.instagram.com/p/DA4yvRAPp2A/?hl=en",
+            "https://www.instagram.com/p/DBp5lO9ySS3/?hl=en",
+            "https://www.instagram.com/p/DA1kOpConeY/?hl=en",
+            "https://www.instagram.com/p/DAwkDSiMa-F/?hl=en",
+            "https://www.instagram.com/p/C-j_cFmMSYi/?hl=en",
+            "https://www.instagram.com/p/C_nfWGTvvb3/?hl=en",
+            "https://www.instagram.com/p/DB-r13nKNwq/?hl=en",
+            "https://www.instagram.com/p/C_k3QrzBmgz/?hl=en",
+            "https://www.instagram.com/p/DCTq1-BxTmC/?hl=en",
+            "https://www.instagram.com/p/DCa1LOOsoHo/?hl=en",
+            "https://www.instagram.com/p/DAONWJOIz7V/?hl=en",
+            "https://www.instagram.com/p/DDAXueXyGeH/?hl=en",
+            "https://www.instagram.com/p/DAa1nuZtZoe/?hl=en",
+            "https://www.instagram.com/p/DDKm5h3SnGj/?hl=en",
+            "https://www.instagram.com/p/DBJpXl-h5Yb/?hl=en",
+            "https://www.instagram.com/p/DB6hILIx3C5/?hl=en",
+            "https://www.instagram.com/p/DC1QldSTFae/?hl=en",
+            "https://www.instagram.com/p/DAFr9qNvKgW/?hl=en",
+            "https://www.instagram.com/p/DDa_nWtI_iU/?hl=en",
+            "https://www.instagram.com/p/DDjTh5xsqU4/?hl=en",
+            "https://www.instagram.com/p/C8lNuFVOc6v/?hl=en",
+            "https://www.instagram.com/p/DDjD5Quo1Qo/?hl=en",
+            "https://www.instagram.com/p/DDzkOKTSPXp/?hl=en",
+            "https://www.instagram.com/p/DAOUxJXorue/?hl=en",
+            "https://www.instagram.com/p/C8uQYWztf-o/?hl=en",
+            "https://www.instagram.com/p/DCKJBRvS8S4/?hl=en",
+            "https://www.instagram.com/p/DEFocLeSVqq/?hl=en",
+            "https://www.instagram.com/p/DChXmfVBbX1/?hl=en",
+            "https://www.instagram.com/p/DEXhgzjRy9t/?hl=en",
+            "https://www.instagram.com/p/C_lVh7qxn6Z/?hl=en",
+            "https://www.instagram.com/p/DETWS8aMXS0/?hl=en",
+            "https://www.instagram.com/p/DEmCyPxN642/?hl=en",
+            "https://www.instagram.com/p/DEbxX34R_1h/?hl=en",
+            "https://www.instagram.com/p/DAi9j5cBQZy/?hl=en",
+            "https://www.instagram.com/p/DElv7WWTpKC/?hl=en",
+            "https://www.instagram.com/p/C_lYPQzN2k1/?hl=en",
+            "https://www.instagram.com/p/DGQ7A6uSuo8/?hl=en",
+            "https://www.instagram.com/p/DDqukJjC4HE/?hl=en",
+            "https://www.instagram.com/p/DGYTjGkqk3g/?hl=en",
+            "https://www.instagram.com/p/DENBfZVS821/?hl=en",
+            "https://www.instagram.com/p/DGvoQL-z4Bs/?hl=en",
+            "https://www.instagram.com/p/DHG0g38MMKh/?hl=en",
+            "https://www.instagram.com/p/DIg353IPMZW/?hl=en",
+            "https://www.instagram.com/p/DI2K2O_RIjA/?hl=en",
+            "https://www.instagram.com/p/DJAaNzMsNvj/?hl=en",
+            "https://www.instagram.com/p/DIiNO_xyjE5/?hl=en",
+            "https://www.instagram.com/p/DJHlqLkykK2/?hl=en"
+        ];
+        
+        // Randomly redirect to one of the reels
+        function redirectToRandomReel() {
+            const randomIndex = Math.floor(Math.random() * reels.length);
+            window.location.href = reels[randomIndex];
+        }
+        
+        window.onload = redirectToRandomReel;
+    </script>
+</head>
+<body>
+    <h1>Redirecting to an Instagram Reel...</h1>
+</body>
+</html>
